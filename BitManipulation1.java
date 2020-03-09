@@ -2,7 +2,7 @@ package bitmanipulation;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class BitManipulation 
+public class BitManipulation1
 {
      public  static int [] manipulate(int[] arr, int[] queries) 
     {
