@@ -4,13 +4,14 @@ public class BitManipulation4
   
     public static int findMinReplacements(int n)
     {
+      //Using Recursion
         if(n==1)
         {
             return 0;
         }
         else
         {
-            if((n&1)==0)
+            if((n&1)==0) // Checks if even?
             {
                 return 1+findMinReplacements(n>>1);
             }
