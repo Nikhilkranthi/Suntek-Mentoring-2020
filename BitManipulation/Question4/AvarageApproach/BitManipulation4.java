@@ -4,6 +4,7 @@ public class BitManipulation4
     static int c=0;
     public static int findMinReplacements(int n)
     {
+        // Using a loop and bitManipulation
         int c=0;
         while(n!=1)
         {
