@@ -3,23 +3,23 @@ package bitmanipulation;
 
 import java.util.Arrays;
 
-public class BitManipulation5 
+public class FindNoOfSetBits 
 {
     public static int [] NoOfSetBits(int number)
     {
         int [] output=new int [number+1];
         
         
-        for(int i=0;i<=number;i++)
+        for(int index=0;index<=number;index++)
         {
-            int temp=i;
+            int temp=index;
             int count=0;
             while(temp!=0)
             {
                 count++;
                 temp=temp&(temp-1);
             }
-            output[i]=count;
+            output[index]=count;
         }
         return output;
     }
