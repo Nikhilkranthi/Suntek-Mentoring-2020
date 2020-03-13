@@ -1,5 +1,5 @@
 package bitmanipulation;
-public class BitManipulation4 
+public class MinReplacements
 {
   
     public static int findMinReplacements(int n)
