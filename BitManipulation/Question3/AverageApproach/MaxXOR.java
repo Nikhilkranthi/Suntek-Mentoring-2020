@@ -1,20 +1,20 @@
 package bitmanipulation;
-public class BitManipulation3 
+public class MaxXOR 
 {
     public static int FinDMaxXor(int [] arr)
     {
         int max=0;
-        for(int i=0;i<arr.length;i++)
+        for(int index=0;index<arr.length;index++)
         {
-            int temp=arr[i];
-            for(int j=i+1;j<arr.length;j++)
+            int temp=arr[index];
+            for(int j=index+1;j<arr.length;j++)
             {
                 temp=temp^arr[j];
                 if(temp>max)
                 {
                     max=temp;
                 }
-                temp=arr[i];
+                temp=arr[index];
             }
         }
         return max;
