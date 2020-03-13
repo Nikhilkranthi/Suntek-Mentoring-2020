@@ -2,16 +2,16 @@ package bitmanipulation;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class BitManipulation 
+public class XorForARange 
 {
      public  static int [] manipulate(int[] arr, int[] queries) 
     {
         int c=0;
         int [] ans=new int[queries.length/2];
-        for(int i=0;i<queries.length;i+=2)
+        for(int index=0;index<queries.length;index+=2)
         {
             int temp=0;
-            for(int k=queries[i];k<=queries[i+1];k++)
+            for(int k=queries[index];k<=queries[index+1];k++)
             {
                temp=temp^arr[k];
             }
@@ -28,19 +28,19 @@ public class BitManipulation
         
         // Input Array 
         
-        for(int i=0;i<sizeOfArray;i++)
+        for(int index=0;index<sizeOfArray;index++)
         {
-            arr[i]=InputReader.nextInt();
+            arr[index]=InputReader.nextInt();
         }
         
         // Input queries
         
         int NoOfQueries=InputReader.nextInt();
         int [] queries=new int[2*NoOfQueries];
-        for(int i=0;i<2*NoOfQueries;i+=2)
+        for(int index=0;index<2*NoOfQueries;index+=2)
         {
-            queries[i]=InputReader.nextInt();
-            queries[i+1]=InputReader.nextInt();;
+            queries[index]=InputReader.nextInt();
+            queries[index+1]=InputReader.nextInt();;
         }
         
         // Calling the implementaion
@@ -49,9 +49,9 @@ public class BitManipulation
         
         // Printing the output
         
-        for(int i=0;i<ans.length;i++)
+        for(int index=0;index<ans.length;index++)
         {
-            System.out.print(ans[i]+" ");
+            System.out.print(ans[index]+" ");
         }
         Testing();
     }
