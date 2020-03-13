@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BitManipulation2 
+public class MinFlipsRequired
 {
     public static void main(String[] args)
     {
