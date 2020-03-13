@@ -3,7 +3,7 @@ package bitmanipulation;
 
 import java.util.Arrays;
 
-public class BitManipulation5 
+public class FindNoOfSetBits
 {
     public static int [] NoOfSetBits(int number)
     {
