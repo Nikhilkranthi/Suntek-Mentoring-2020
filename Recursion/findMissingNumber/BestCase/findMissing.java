@@ -1,11 +1,15 @@
 
-package recursion;
+/******************************************************************************
 
-import java.util.Scanner;
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
 
-public class findMissing {
+*******************************************************************************/
 
-         public static void main(String [] args)
+public class Main
+{
+	public static void main(String [] args)
          {
         Testing();
 //        Scanner s=new Scanner(System.in);
@@ -30,23 +34,35 @@ public class findMissing {
         }
         return newArray;
     }
-
-    public static int findMissing(int[] input) 
-    {
+        public static int findMissing(int [] input)
+        {
+                if(input[0]!=1)
+                {
+                        return 1;
+                }
+                else
+                {
+                        return findMissingHelper(input);
+                }
+        }
+    public static int findMissingHelper(int[] input) 
+    {   
+        
+        
        if(input[1]-input[0]!=1)
            return input[0]+1;
         input = getSliceOfArray(input, 1,input.length); 
-        return findMissing(input);
+        return findMissingHelper(input);
        
     }
 
     private static void Testing() 
     {
        //TestCase 1
-        int [] test1arr=new int[]{3,4,5,7,8,9};
+        int [] test1arr=new int[]{1,2,3,5,6,7};
         int ans1=findMissing(test1arr);
        
-        int exp1=6;
+        int exp1=4;
         if(ans1==exp1)
         {
             System.out.println("Passed");
@@ -56,10 +72,10 @@ public class findMissing {
             System.out.println("Failed");
         }
         //TestCase 2
-        int [] test2arr=new int[]{1000,1002,1003,1004,1005};
+        int [] test2arr=new int[]{1,3,5,7,9};
         int ans2=findMissing(test2arr);
        
-        int exp2=1001;
+        int exp2=2;
         if(ans2==exp2)
         {
             System.out.println("Passed");
@@ -69,10 +85,10 @@ public class findMissing {
             System.out.println("Failed");
         }
         //TestCase 3
-        int [] test3arr=new int[]{99,100,101,102,104};
+        int [] test3arr=new int[]{2,3,4,5,6};
         int ans3=findMissing(test3arr);
-       
-        int exp3=103;
+      // System.out.println(ans3);
+        int exp3=1;
         if(ans3==exp3)
         {
             System.out.println("Passed");
@@ -82,10 +98,10 @@ public class findMissing {
             System.out.println("Failed");
         }
         //TestCase 4
-        int [] test4arr=new int[]{199,200,201,203,204};
+        int [] test4arr=new int[]{1,199,200,201,203,204};
         int ans4=findMissing(test4arr);
        
-        int exp4=202;
+        int exp4=2;
         if(ans4==exp4)
         {
             System.out.println("Passed");
@@ -95,10 +111,10 @@ public class findMissing {
             System.out.println("Failed");
         }
          //TestCase 5
-        int [] test5arr=new int[]{1499,1500,1501,1503,1504};
+        int [] test5arr=new int[]{1,2,3,4,9};
         int ans5=findMissing(test5arr);
        
-        int exp5=1502;
+        int exp5=5;
         if(ans5==exp5)
         {
             System.out.println("Passed");
@@ -108,5 +124,4 @@ public class findMissing {
             System.out.println("Failed");
         }
     }
-    
 }
